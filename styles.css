@@ -1,0 +1,63 @@
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the background color and make the body fill the entire screen */
+body {
+    height: 100vh;
+    background-color: #ffb6c1;  /* Soft pink background */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack content vertically */
+    overflow: hidden;  /* Prevent scrollbars */
+}
+
+/* Style the content container */
+.content {
+    text-align: center;
+    color: #ff007f;  /* Bold pink color for text */
+    margin-bottom: 20px;  /* Space between message and social links */
+}
+
+/* Style the large message */
+h1 {
+    font-size: 4rem;  /* Big text */
+    text-transform: uppercase;
+    animation: pulse 2s infinite;  /* Add a pulsing effect to the text */
+}
+
+/* Style for the social media links */
+.social-links {
+    display: flex;
+    gap: 20px;  /* Space between the logos */
+}
+
+/* Style for the logos */
+.social-logo {
+    width: 50px;  /* Adjust size of logos */
+    height: auto;
+    transition: transform 0.3s ease;  /* Smooth scaling on hover */
+}
+
+/* Hover effect on the logos */
+.social-logo:hover {
+    transform: scale(1.2);  /* Slightly enlarge the logo on hover */
+}
+
+/* Animation for pulsing effect on the text */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
