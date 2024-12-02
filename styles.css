@@ -34,7 +34,7 @@ body {
 
 /* Growtopia Character Styling */
 .growtopia-character {
-    width: 120px;  /* Set the size of your character */
+    width: 200px;  /* Increased size of your character (previously 120px) */
     height: auto;
     position: absolute;
     top: 120px; /* Position the character right above the text */
