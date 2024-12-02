@@ -1,63 +1,81 @@
-/* Basic reset for margin and padding */
+/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Set the background color and make the body fill the entire screen */
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Set the background */
 body {
     height: 100vh;
-    background-color: #ffb6c1;  /* Soft pink background */
-    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: 'Poppins', Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Stack content vertically */
-    overflow: hidden;  /* Prevent scrollbars */
+    flex-direction: column;
+    overflow: hidden;
 }
 
-/* Style the content container */
+/* Content container */
 .content {
     text-align: center;
-    color: #ff007f;  /* Bold pink color for text */
-    margin-bottom: 20px;  /* Space between message and social links */
+    color: #ff007f;
+    margin-bottom: 30px;
 }
 
-/* Style the large message */
+/* Heading style */
 h1 {
-    font-size: 4rem;  /* Big text */
+    font-size: 4rem;
     text-transform: uppercase;
-    animation: pulse 2s infinite;  /* Add a pulsing effect to the text */
+    letter-spacing: 2px;
+    animation: pulse 2s infinite;
 }
 
-/* Style for the social media links */
+/* Social links container */
 .social-links {
     display: flex;
-    gap: 20px;  /* Space between the logos */
+    gap: 20px;
 }
 
-/* Style for the logos */
+/* Logo styles */
 .social-logo {
-    width: 50px;  /* Adjust size of logos */
+    width: 60px;
     height: auto;
-    transition: transform 0.3s ease;  /* Smooth scaling on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px; /* Rounded edges */
 }
 
-/* Hover effect on the logos */
+/* Hover effect */
 .social-logo:hover {
-    transform: scale(1.2);  /* Slightly enlarge the logo on hover */
+    transform: scale(1.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Animation for pulsing effect on the text */
+/* Pulsing animation */
 @keyframes pulse {
-    0% {
+    0%, 100% {
         transform: scale(1);
     }
     50% {
         transform: scale(1.2);
     }
-    100% {
-        transform: scale(1);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .social-logo {
+        width: 40px;
+    }
+
+    .social-links {
+        gap: 15px;
     }
 }
