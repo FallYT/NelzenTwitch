@@ -34,5 +34,5 @@ function moveCharacter() {
     character.style.left = `${currentLeft}px`;  // Apply the new left position
 }
 
-// Start moving the character every 10 milliseconds (for smooth movement)
+// Start moving the character every 10 milliseconds (for smooth movement
 setInterval(moveCharacter, 10);
