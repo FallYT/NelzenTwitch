@@ -90,6 +90,14 @@ h1 {
     border: 2px solid #ffdb58; /* Light yellow border to fit Growtopia theme */
 }
 
+/* Container for the Instagram link and message */
+.social-link-container {
+    text-align: center; /* Center the logo and message */
+    display: flex;
+    flex-direction: column; /* Stack the logo and message vertically */
+    align-items: center; /* Center the items horizontally */
+}
+
 /* Hide the "Not Yet Available" message by default */
 .not-available-message {
     display: none;
@@ -97,9 +105,4 @@ h1 {
     font-size: 16px;
     margin-top: 10px;
     text-align: center; /* Center the text below the Instagram logo */
-}
-
-/* Style for the Instagram link container */
-#instagram-link {
-    text-align: center; /* Ensure the logo is centered */
 }
