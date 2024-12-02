@@ -92,6 +92,7 @@ h1 {
 .not-available {
     color: red;
     font-size: 1.5rem;
+    font-weight: bold;  /* Make the text bold */
     margin-top: 10px; /* Moved the text a little lower to avoid overlap */
     display: none; /* Hidden by default */
 }
