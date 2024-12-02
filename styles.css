@@ -22,9 +22,9 @@ body {
     background-repeat: no-repeat;
 }
 
-/* Growtopia Character Styling */
+/* Growtopia Character Styling - Increased Size */
 .growtopia-character {
-    width: 150px;  /* Set the size of your character */
+    width: 250px;  /* Set the character size to make it bigger */
     height: auto;
     position: absolute;
     top: 120px; /* Position the character right above the text */
@@ -91,22 +91,18 @@ h1 {
 /* Instagram Text "Not Yet Available" Styling */
 #not-available {
     display: none;  /* Initially hidden */
-    font-size: 18px;
+    font-size: 24px;  /* Bigger text */
     font-weight: bold;
-    color: red;
+    color: red;  /* Red color for the message */
     text-align: center;
     margin-top: 10px;
+    position: absolute;
+    top: 150px;  /* Adjusted position to be below the Instagram logo */
+    left: 50%;
+    transform: translateX(-50%); /* Centered horizontally */
 }
 
-/* Position the "Not Yet Available" text under the Instagram logo */
+/* Instagram Link Styling */
 .social-links .instagram {
     position: relative;
-}
-
-.social-links .instagram + #not-available {
-    position: absolute;
-    top: 60px;  /* Adjust position to be slightly below the Instagram logo */
-    left: 0;
-    width: 100%;
-    text-align: center;
 }
