@@ -37,12 +37,21 @@ function moveCharacter() {
 // Start moving the character every 10 milliseconds (for smooth movement)
 setInterval(moveCharacter, 10);
 
-// Function to display the "Not Yet Available" message under Instagram link for 2 seconds
-document.getElementById("instagram-link").addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent the link from opening or redirecting
-    const message = document.getElementById("instagram-message");
-    message.style.display = "block";  // Show the message
+
+// Get the Instagram logo element and the "Not Yet Available" text
+const instagramLink = document.querySelector('.social-links .instagram');
+const notAvailableText = document.getElementById('not-available');
+
+// Add event listener for Instagram click
+instagramLink.addEventListener('click', function(event) {
+    // Prevent the default link behavior (no redirect)
+    event.preventDefault();
+
+    // Show the "Not Yet Available" text
+    notAvailableText.style.display = 'block';
+
+    // Hide the text after 2 seconds
     setTimeout(function() {
-        message.style.display = "none";  // Hide the message after 2 seconds
+        notAvailableText.style.display = 'none';
     }, 2000);
 });
