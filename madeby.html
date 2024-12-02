@@ -3,70 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Made by Fall</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Overlay Text</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Press Start 2P', cursive;
-        }
-
-        body {
-            background: linear-gradient(135deg, #007b00, #00c000);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #ffffff;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .container {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px 40px;
-            border-radius: 15px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        h1 {
-            font-size: 2rem;
-            color: #ffff00;
-            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: #00ff00;
-            color: #000;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 0.8rem;
-            transition: transform 0.2s ease, background 0.3s ease;
-        }
-
-        a:hover {
-            transform: scale(1.1);
-            background: #ffff00;
+        /* Styling for the overlay text */
+        .overlay-text {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 9999; /* Ensures it's on top of everything */
+            font-size: 1.5rem;
+            font-family: 'Press Start 2P', cursive, Arial, sans-serif;
+            color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Glow effect for visibility */
+            pointer-events: none; /* Makes sure clicks pass through it */
         }
     </style>
 </head>
 <body>
+    <!-- Main content of your website -->
+    <div class="background-particles"></div>
     <div class="container">
-        <h1>Made by Fall</h1>
-        <p>This website was crafted with care and creativity by Fall. Thank you for visiting!</p>
-        <a href="https://github.com/your-username" target="_blank">Visit My GitHub</a>
+        <div class="character-wrapper">
+            <img src="set.png" alt="Nelzen's Character" class="character">
+            <div class="character-glow"></div>
+        </div>
+        
+        <div class="content">
+            <h1 class="glitch-text" data-text="Nelzen's Family">Nelzen's Family</h1>
+            <p class="subtitle">Growtopia Content Creator & Community Leader</p>
+            
+            <div class="social-links">
+                <a href="https://www.twitch.tv/nelzenlovetohelp" target="_blank" class="social-tooltip" data-tooltip="Twitch">
+                    <img src="https://www.vectorlogo.zone/logos/twitch/twitch-icon.svg" alt="Twitch">
+                </a>
+                <a href="https://discord.gg/mhdYWPD9XR" target="_blank" class="social-tooltip" data-tooltip="Discord">
+                    <img src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="Discord">
+                </a>
+                <a href="https://www.tiktok.com/@nelzenlovetohelp" target="_blank" class="social-tooltip" data-tooltip="TikTok">
+                    <img src="https://www.svgrepo.com/show/333611/tiktok.svg" alt="TikTok">
+                </a>
+            </div>
+        </div>
     </div>
+    
+    <!-- Overlay Text -->
+    <div class="overlay-text">Made by Fall</div>
+
+    <script src="script.js"></script>
 </body>
 </html>
