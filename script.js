@@ -16,17 +16,19 @@ function moveCharacter() {
         currentLeft += 5;  // Move the character to the right by 5px per frame
 
         if (currentLeft >= windowWidth - characterWidth) {
-            // If the character reaches the right side, reverse direction and mirror it
+            // If the character reaches the right side, reverse direction
             movingRight = false;
-            character.style.transform = 'scaleX(-1)'; // Mirror the character horizontally
+            // Mirror the character horizontally to face left
+            character.style.transform = 'scaleX(-1)';
         }
     } else {
         currentLeft -= 5;  // Move the character to the left by 5px per frame
 
         if (currentLeft <= 0) {
-            // If the character reaches the left side, reverse direction and mirror it
+            // If the character reaches the left side, reverse direction
             movingRight = true;
-            character.style.transform = 'scaleX(1)';  // Reset the character's direction
+            // Reset the character to face right
+            character.style.transform = 'scaleX(1)';
         }
     }
 
