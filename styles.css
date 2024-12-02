@@ -22,7 +22,9 @@ body {
 .growtopia-character {
     width: 150px;  /* Set the size of your character */
     height: auto;
-    transition: left 1s, top 1s; /* Smooth transition for movement */
+    position: absolute;  /* Set absolute positioning for movement */
+    transition: left 0.01s linear;  /* Smooth movement */
+    left: 0;  /* Start from the left side */
 }
 
 /* Content Styling */
