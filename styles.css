@@ -24,7 +24,7 @@ body {
 
 /* Growtopia Character Styling */
 .growtopia-character {
-    width: 120px;  /* Set the size of your character */
+    width: 150px;  /* Increased size of your character */
     height: auto;
     position: absolute;
     top: 120px; /* Position the character right above the text */
@@ -71,11 +71,9 @@ h1 {
 
 /* Logo Styling */
 .social-logo {
-    width: 90px;  /* Adjust the size of the logos */
+    width: 90px;  /* Increased logo size for better visibility */
     height: auto;
     transition: transform 0.3s ease;
-    display: block;
-    margin: 0 auto; /* Center the logos horizontally */
 }
 
 /* Hover effect on the logos */
@@ -90,19 +88,15 @@ h1 {
     border: 2px solid #ffdb58; /* Light yellow border to fit Growtopia theme */
 }
 
-/* Container for the Instagram link and message */
-.social-link-container {
-    text-align: center; /* Center the logo and message */
-    display: flex;
-    flex-direction: column; /* Stack the logo and message vertically */
-    align-items: center; /* Center the items horizontally */
+/* Styling for the "Not Yet Available" text */
+.not-available {
+    color: red;
+    font-size: 1.5rem;
+    margin-top: 10px; /* Moved the text a little lower to avoid overlap */
+    display: none; /* Hidden by default */
 }
 
-/* Hide the "Not Yet Available" message by default */
-.not-available-message {
-    display: none;
-    color: red;
-    font-size: 16px;
-    margin-top: 10px;
-    text-align: center; /* Center the text below the Instagram logo */
+/* Instagram Logo Styling */
+.social-links .instagram {
+    position: relative;
 }
