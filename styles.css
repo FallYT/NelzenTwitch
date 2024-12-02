@@ -19,15 +19,8 @@ body {
 }
 
 /* Character Styling */
-.character-container {
-    position: absolute; /* Make the character move freely */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the character initially */
-}
-
 .growtopia-character {
-    width: 150px;
+    width: 150px;  /* Set the size of your character */
     height: auto;
     transition: left 1s, top 1s; /* Smooth transition for movement */
 }
@@ -100,8 +93,8 @@ h1 {
 
 /* Responsive design */
 @media (max-width: 600px) {
-    .character-container {
-        display: none;
+    .growtopia-character {
+        width: 100px; /* Adjust for smaller screens */
     }
 
     h1 {
