@@ -34,9 +34,15 @@ function moveCharacter() {
     character.style.left = `${currentLeft}px`;  // Apply the new left position
 }
 
-// Initialize the position of the character (ensure it starts from the left)
-character.style.position = 'absolute';
-character.style.left = '0px';  // Start from the left side
-
 // Start moving the character every 10 milliseconds (for smooth movement)
 setInterval(moveCharacter, 10);
+
+// Function to display the "Not Yet Available" message under Instagram link for 2 seconds
+document.getElementById("instagram-link").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the link from opening or redirecting
+    const message = document.getElementById("instagram-message");
+    message.style.display = "block";  // Show the message
+    setTimeout(function() {
+        message.style.display = "none";  // Hide the message after 2 seconds
+    }, 2000);
+});
