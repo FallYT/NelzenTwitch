@@ -1,28 +1,37 @@
 // Select the character image element
 const character = document.querySelector('.growtopia-character');
 
-// Set the size of the character (you can adjust these values to match your image size)
-const characterWidth = character.width;
-const characterHeight = character.height;
+// Set the initial direction (true = moving right, false = moving left)
+let movingRight = true;
 
-// Function to get random positions within the window (ensures the character stays on the screen)
-function getRandomPosition() {
-    const windowWidth = window.innerWidth - characterWidth;  // Subtract character width to avoid overflow
-    const windowHeight = window.innerHeight - characterHeight;  // Subtract character height to avoid overflow
-
-    const randomX = Math.random() * windowWidth;  // Random X position
-    const randomY = Math.random() * windowHeight;  // Random Y position
-
-    return { x: randomX, y: randomY };
-}
-
-// Function to move the character to the random position
+// Function to move the character
 function moveCharacter() {
-    const { x, y } = getRandomPosition();
-    character.style.position = 'absolute';  // Ensure absolute positioning for movement
-    character.style.left = `${x}px`;  // Apply the random X position
-    character.style.top = `${y}px`;  // Apply the random Y position
+    const windowWidth = window.innerWidth;  // Get the window width
+    const characterWidth = character.offsetWidth;  // Get the character's width
+
+    let currentLeft = parseFloat(character.style.left) || 0; // Get the current left position, default to 0
+
+    // If the character is moving right
+    if (movingRight) {
+        currentLeft += 5;  // Move the character to the right by 5px per frame
+
+        if (currentLeft >= windowWidth - characterWidth) {
+            // If the character reaches the right side, reverse direction and mirror it
+            movingRight = false;
+            character.style.transform = 'scaleX(-1)'; // Mirror the character horizontally
+        }
+    } else {
+        currentLeft -= 5;  // Move the character to the left by 5px per frame
+
+        if (currentLeft <= 0) {
+            // If the character reaches the left side, reverse direction and mirror it
+            movingRight = true;
+            character.style.transform = 'scaleX(1)';  // Reset the character's direction
+        }
+    }
+
+    character.style.left = `${currentLeft}px`;  // Apply the new left position
 }
 
-// Move the character every 2 seconds (2000ms)
-setInterval(moveCharacter, 2000);
+// Start moving the character every 10 milliseconds (for smooth movement)
+setInterval(moveCharacter, 10);
