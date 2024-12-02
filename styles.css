@@ -8,7 +8,7 @@
 /* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Set the background */
+/* Background styling */
 body {
     height: 100vh;
     background: linear-gradient(135deg, #ff9a9e, #fad0c4);
@@ -27,6 +27,13 @@ body {
     margin-bottom: 30px;
 }
 
+/* Subtitle styling */
+.subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+}
+
 /* Heading style */
 h1 {
     font-size: 4rem;
@@ -35,23 +42,39 @@ h1 {
     animation: pulse 2s infinite;
 }
 
+/* Card styling */
+.card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
 /* Social links container */
 .social-links {
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
 }
 
 /* Logo styles */
 .social-logo {
-    width: 60px;
+    width: 50px;
     height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 10px; /* Rounded edges */
+    border-radius: 50%;
 }
 
 /* Hover effect */
 .social-logo:hover {
-    transform: scale(1.3);
+    transform: scale(1.2);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
