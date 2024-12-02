@@ -31,7 +31,7 @@ body {
 /* Content Styling */
 .content {
     text-align: center;
-    margin-top: 200px; /* Add margin to push content down */
+    margin-top: 150px; /* Add margin to push content down and prevent overlap */
 }
 
 /* Main Heading */
