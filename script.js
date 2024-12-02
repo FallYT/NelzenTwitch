@@ -18,7 +18,7 @@ function moveCharacter() {
         if (currentLeft >= windowWidth - characterWidth) {
             // If the character reaches the right side, reverse direction
             movingRight = false;
-            // Mirror the character horizontally to face left
+            // Ensure the character is facing left when moving right
             character.style.transform = 'scaleX(-1)';
         }
     } else {
@@ -27,7 +27,7 @@ function moveCharacter() {
         if (currentLeft <= 0) {
             // If the character reaches the left side, reverse direction
             movingRight = true;
-            // Reset the character to face right
+            // Ensure the character is facing right when moving left
             character.style.transform = 'scaleX(1)';
         }
     }
@@ -35,6 +35,10 @@ function moveCharacter() {
     // Update the character's left position
     character.style.left = `${currentLeft}px`;  // Apply the new left position
 }
+
+// Initialize the position of the character (ensure it starts from the left)
+character.style.position = 'absolute';
+character.style.left = '0px';  // Start from the left side
 
 // Start moving the character every 10 milliseconds (for smooth movement)
 setInterval(moveCharacter, 10);
