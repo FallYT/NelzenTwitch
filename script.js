@@ -30,6 +30,7 @@ function moveCharacter() {
         }
     }
 
+    // Update the character's left position
     character.style.left = `${currentLeft}px`;  // Apply the new left position
 }
 
