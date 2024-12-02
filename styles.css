@@ -1,106 +1,32 @@
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Character styling */
+.character-container {
+    position: absolute;
+    top: 50%;
+    left: 5%; /* Adjust the horizontal placement to the left */
+    transform: translateY(-50%); /* Vertically center the character */
 }
 
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-/* Background styling */
-body {
-    height: 100vh;
-    background: linear-gradient(135deg, #0d3b66, #145374, #0e6b0e);
-    font-family: 'Poppins', Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    overflow: hidden;
-    color: #ffffff;
-}
-
-/* Content container */
-.content {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* Subtitle styling */
-.subtitle {
-    font-size: 1.2rem;
-    color: #c7e9b0;
-    margin-top: 10px;
-}
-
-/* Heading style */
-h1 {
-    font-size: 4rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    animation: pulse 2s infinite;
-    color: #a7ff83;
-    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
-}
-
-/* Card styling */
-.card {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-    text-align: center;
-}
-
-.card h2 {
-    font-size: 2rem;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-/* Social links container */
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-/* Logo styles */
-.social-logo {
-    width: 60px; /* Make logos larger */
+.growtopia-character {
+    width: 150px; /* Adjust size of the character */
     height: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 5px; /* Subtle corner rounding */
+    animation: float 3s ease-in-out infinite; /* Floating effect */
 }
 
-/* Hover effect */
-.social-logo:hover {
-    transform: scale(1.2);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-}
-
-/* Pulsing animation */
-@keyframes pulse {
+/* Floating animation for character */
+@keyframes float {
     0%, 100% {
-        transform: scale(1);
+        transform: translateY(-50%) translateX(0); /* Centered vertically */
     }
     50% {
-        transform: scale(1.1);
+        transform: translateY(-60%) translateX(0); /* Slight upward float */
     }
 }
+
+/* Other styles remain unchanged */
 
 /* Responsive design */
 @media (max-width: 600px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .social-logo {
-        width: 50px;
-    }
-
-    .social-links {
-        gap: 15px;
+    .character-container {
+        display: none; /* Hide character on smaller screens */
     }
 }
