@@ -5,10 +5,9 @@
     box-sizing: border-box;
 }
 
-/* Body Styling - Growtopia theme with a pixelated background */
+/* Body Styling - Growtopia theme */
 body {
     height: 100vh;
-    background-color: #2c6e49; /* Growtopia-inspired green color */
     font-family: 'Minecraft', sans-serif; /* Blocky font similar to Growtopia */
     display: flex;
     justify-content: center;
@@ -16,10 +15,9 @@ body {
     flex-direction: column;
     color: #ffffff;
     overflow: hidden;
-    background-image: url('https://cdn.discordapp.com/attachments/944458004198565376/1137777898900912148/branch5.jpg'); /* Optional Growtopia-style background */
+    background-image: linear-gradient(135deg, #a3d5a0, #c0e9ff); /* Growtopia-inspired gradient background */
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 }
 
 /* Growtopia Character Styling */
@@ -27,7 +25,7 @@ body {
     width: 120px;  /* Set the size of your character */
     height: auto;
     position: absolute;
-    top: 120px; /* Position the character right above the text */
+    top: 100px; /* Position the character right above the text */
     left: 0;
     transition: left 0.01s linear;
 }
@@ -35,7 +33,7 @@ body {
 /* Content Styling */
 .content {
     text-align: center;
-    margin-top: 250px; /* Ensure there's space between the character and the text */
+    margin-top: 150px; /* Ensure there's space between the character and the text */
 }
 
 /* Main Heading */
@@ -86,4 +84,20 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Adding shadow effect */
     border: 2px solid #ffdb58; /* Light yellow border to fit Growtopia theme */
+}
+
+/* Social Media Link Styling (Blocky) */
+.social-link {
+    display: inline-block;
+    border: 3px solid #ffdb58;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+    border-radius: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for social media buttons */
+.social-link:hover {
+    background-color: #ffdb58;  /* Growtopia's yellow color */
+    transform: scale(1.1);  /* Enlarge the button slightly on hover */
 }
