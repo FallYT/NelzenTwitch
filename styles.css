@@ -23,14 +23,15 @@ body {
     width: 150px;  /* Set the size of your character */
     height: auto;
     position: absolute;  /* Set absolute positioning for movement */
+    top: 50px;  /* Position character above the text */
+    left: 0;
     transition: left 0.01s linear;  /* Smooth movement */
-    left: 0;  /* Start from the left side */
 }
 
 /* Content Styling */
 .content {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 200px; /* Add margin to push content down */
 }
 
 /* Main Heading */
@@ -53,4 +54,24 @@ h1 {
     100% {
         transform: scale(1);
     }
+}
+
+/* Social Media Links Styling */
+.social-links {
+    display: flex;
+    gap: 20px; /* Space between logos */
+    justify-content: center; /* Center the logos */
+    margin-top: 30px; /* Add some space between the heading and the logos */
+}
+
+/* Logo Styling */
+.social-logo {
+    width: 50px;  /* Set logo size */
+    height: auto;
+    transition: transform 0.3s ease;  /* Smooth scaling on hover */
+}
+
+/* Hover effect on the logos */
+.social-logo:hover {
+    transform: scale(1.2);  /* Slightly enlarge the logo on hover */
 }
