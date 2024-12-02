@@ -42,44 +42,6 @@ h1 {
     animation: pulse 2s infinite;
 }
 
-/* Subheading */
-.subtitle {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    color: #d4a5a5;
-}
-
-/* Social Media Links */
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
-}
-
-.card h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #e94560;
-}
-
-/* Social Links Styling */
-.social-links {
-    display: flex;
-    gap: 20px;
-}
-
-.social-logo {
-    width: 50px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-/* Hover Effect */
-.social-logo:hover {
-    transform: scale(1.2);
-}
-
 /* Animation for pulsing effect on the text */
 @keyframes pulse {
     0% {
@@ -90,24 +52,5 @@ h1 {
     }
     100% {
         transform: scale(1);
-    }
-}
-
-/* Responsive design */
-@media (max-width: 600px) {
-    .growtopia-character {
-        width: 100px; /* Adjust for smaller screens */
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    .subtitle {
-        font-size: 1.2rem;
-    }
-
-    .social-logo {
-        width: 40px;
     }
 }
