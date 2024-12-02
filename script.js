@@ -35,4 +35,4 @@ function moveCharacter() {
 }
 
 // Start moving the character every 10 milliseconds (for smooth movement)
-setInterval(moveCharacter, 10); 
+setInterval(moveCharacter, 10);
