@@ -8,30 +8,32 @@
 /* Body Styling */
 body {
     height: 100vh;
-    background-color: #1a1a2e; /* Dark blue background */
-    font-family: Arial, sans-serif;
+    background-color: #313131; /* Growtopia-themed background (dark) */
+    font-family: 'Verdana', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #fff;
+    color: #ffffff;
     overflow: hidden;
+    background-image: url('https://cdn.discordapp.com/attachments/944458004198565376/1137777898900912148/branch5.jpg'); /* Optional, add a Growtopia-style background */
+    background-size: cover;
 }
 
 /* Character Styling */
 .growtopia-character {
-    width: 150px;  /* Set the size of your character */
+    width: 120px;  /* Set the size of your character */
     height: auto;
-    position: absolute;  /* Set absolute positioning for movement */
-    top: 50px;  /* Position character above the text */
+    position: absolute;
+    top: 130px; /* Set character's position above the text */
     left: 0;
-    transition: left 0.01s linear;  /* Smooth movement */
+    transition: left 0.01s linear;
 }
 
 /* Content Styling */
 .content {
     text-align: center;
-    margin-top: 150px; /* Add margin to push content down and prevent overlap */
+    margin-top: 250px; /* Add margin to prevent overlap with character */
 }
 
 /* Main Heading */
@@ -39,7 +41,7 @@ h1 {
     font-size: 4rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #e94560;
+    color: #F0A500; /* Growtopia-inspired gold color */
     animation: pulse 2s infinite;
 }
 
@@ -49,7 +51,7 @@ h1 {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
     100% {
         transform: scale(1);
@@ -59,19 +61,26 @@ h1 {
 /* Social Media Links Styling */
 .social-links {
     display: flex;
-    gap: 20px; /* Space between logos */
+    gap: 40px; /* Increased space between the logos */
     justify-content: center; /* Center the logos */
-    margin-top: 30px; /* Add some space between the heading and the logos */
+    margin-top: 30px;
 }
 
 /* Logo Styling */
 .social-logo {
-    width: 50px;  /* Set logo size */
+    width: 80px;  /* Increased logo size */
     height: auto;
-    transition: transform 0.3s ease;  /* Smooth scaling on hover */
+    transition: transform 0.3s ease;
 }
 
 /* Hover effect on the logos */
 .social-logo:hover {
-    transform: scale(1.2);  /* Slightly enlarge the logo on hover */
+    transform: scale(1.3);  /* Slightly enlarge the logo on hover */
+}
+
+/* Adding border and shadow to logos for better visibility */
+.social-logo {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adding shadow effect */
+    border: 2px solid #F0A500; /* Gold border */
 }
