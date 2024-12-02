@@ -1,9 +1,29 @@
+/* Reset and Box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    height: 100vh;
+    background-color: #1a1a2e; /* Dark blue background for the cool vibe */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff; /* White text */
+    overflow: hidden;
+}
+
 /* Character styling */
 .character-container {
     position: absolute;
     top: 50%;
-    left: 5%; /* Adjust the horizontal placement to the left */
-    transform: translateY(-50%); /* Vertically center the character */
+    left: 5%; /* Adjust to place character to the left */
+    transform: translateY(-50%); /* Center vertically */
 }
 
 .growtopia-character {
@@ -15,18 +35,94 @@
 /* Floating animation for character */
 @keyframes float {
     0%, 100% {
-        transform: translateY(-50%) translateX(0); /* Centered vertically */
+        transform: translateY(-50%) translateX(0);
     }
     50% {
-        transform: translateY(-60%) translateX(0); /* Slight upward float */
+        transform: translateY(-60%) translateX(0);
     }
 }
 
-/* Other styles remain unchanged */
+/* Content Styling */
+.content {
+    text-align: center;
+    margin-top: 50px; /* Add some space between character and text */
+}
 
-/* Responsive design */
+/* Main Heading */
+h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #e94560; /* A cool reddish color for the heading */
+    animation: pulse 2s infinite; /* Pulsing animation for the heading */
+}
+
+/* Subheading */
+.subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #d4a5a5; /* Soft pink for subtitle */
+}
+
+/* Social Media Links */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #e94560; /* Match the color of heading */
+}
+
+/* Social Links Styling */
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-logo {
+    width: 50px; /* Adjust logo size */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.social-logo:hover {
+    transform: scale(1.2); /* Slightly enlarge the logo on hover */
+}
+
+/* Animation for pulsing effect on the text */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive design for smaller screens */
 @media (max-width: 600px) {
     .character-container {
-        display: none; /* Hide character on smaller screens */
+        display: none; /* Hide character on small screens */
+    }
+
+    h1 {
+        font-size: 3rem; /* Smaller heading on mobile */
+    }
+
+    .subtitle {
+        font-size: 1.2rem; /* Smaller subtitle on mobile */
+    }
+
+    .social-logo {
+        width: 40px; /* Smaller social icons on mobile */
     }
 }
