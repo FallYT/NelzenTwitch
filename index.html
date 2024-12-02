@@ -4,26 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nelzen's Family</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="background-particles"></div>
     <div class="container">
-        <img src="set.png" alt="Nelzen's Character" class="character">
+        <div class="character-wrapper">
+            <img src="set.png" alt="Nelzen's Character" class="character">
+            <div class="character-glow"></div>
+        </div>
         
         <div class="content">
-            <h1>Nelzen's Family</h1>
+            <h1 class="glitch-text" data-text="Nelzen's Family">Nelzen's Family</h1>
+            <p class="subtitle">Growtopia Content Creator & Community Leader</p>
             
             <div class="social-links">
-                <a href="https://www.twitch.tv/nelzenlovetohelp" target="_blank">
+                <a href="https://www.twitch.tv/nelzenlovetohelp" target="_blank" class="social-tooltip" data-tooltip="Twitch">
                     <img src="https://www.vectorlogo.zone/logos/twitch/twitch-icon.svg" alt="Twitch">
                 </a>
-                <a href="https://discord.gg/mhdYWPD9XR" target="_blank">
+                <a href="https://discord.gg/mhdYWPD9XR" target="_blank" class="social-tooltip" data-tooltip="Discord">
                     <img src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="Discord">
                 </a>
-                <a href="#" id="instagram-link">
-                    <img src="https://www.svgrepo.com/show/448231/instagram.svg" alt="Instagram">
+                <a href="#" id="instagram-link" class="social-tooltip" data-tooltip="Instagram">
+                    <img src="https://www.svgrepo.com/show/448231/instagram.svg" alt="Instagram" class="instagram-logo">
                 </a>
-                <a href="https://www.tiktok.com/@nelzenlovetohelp" target="_blank">
+                <a href="https://www.tiktok.com/@nelzenlovetohelp" target="_blank" class="social-tooltip" data-tooltip="TikTok">
                     <img src="https://www.svgrepo.com/show/333611/tiktok.svg" alt="TikTok">
                 </a>
             </div>
