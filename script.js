@@ -1,26 +1,27 @@
-// Select the character image
+// Select the character image element
 const character = document.querySelector('.growtopia-character');
 
-// Function to get random positions
-function getRandomPosition() {
-    // Get the width and height of the window
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
+// Set the size of the character (you can adjust these values to match your image size)
+const characterWidth = character.width;
+const characterHeight = character.height;
 
-    // Generate random positions within the window
-    const randomX = Math.random() * windowWidth; // Random horizontal position
-    const randomY = Math.random() * windowHeight; // Random vertical position
+// Function to get random positions within the window (ensures the character stays on the screen)
+function getRandomPosition() {
+    const windowWidth = window.innerWidth - characterWidth;  // Subtract character width to avoid overflow
+    const windowHeight = window.innerHeight - characterHeight;  // Subtract character height to avoid overflow
+
+    const randomX = Math.random() * windowWidth;  // Random X position
+    const randomY = Math.random() * windowHeight;  // Random Y position
 
     return { x: randomX, y: randomY };
 }
 
-// Move the character to a random position
+// Function to move the character to the random position
 function moveCharacter() {
     const { x, y } = getRandomPosition();
-
-    // Apply the random positions to the character's style
-    character.style.left = `${x}px`;
-    character.style.top = `${y}px`;
+    character.style.position = 'absolute';  // Ensure absolute positioning for movement
+    character.style.left = `${x}px`;  // Apply the random X position
+    character.style.top = `${y}px`;  // Apply the random Y position
 }
 
 // Move the character every 2 seconds (2000ms)
